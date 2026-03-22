@@ -15,6 +15,15 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
+/* コンテナ */
+.container2 {
+    max-width: 1300px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+}
+
 /* タイトル */
 h1 {
     font-size: 28px;
@@ -70,27 +79,43 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
+/* テーブル */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* ← 行をカード化 */
     margin-top: 20px;
 }
 
-th,
-td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+/* ヘッダー */
+th {
+    background:#1db954;
+    color: white;
+    padding: 14px;
+    font-weight: 600;
+    border: none;
+    text-align: center;
 }
 
-th {
-    background-color: #4a90e2;
-    color: white;
+/* 行をカード化 */
+td {
+    background: #ffffff;
+    padding: 16px;
+    border: none;
+    text-align: center;
+}
+
+/* 行全体をカード風に */
+tr {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.2s ease;
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 .content {
