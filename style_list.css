@@ -1,0 +1,172 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #eaf6ff, #fffbea);
+    margin: 0;
+}
+
+/* コンテナ */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* =====================
+   テーブル
+===================== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 14px;
+}
+
+/* ヘッダー */
+/* =====================
+   ヘッダー（完全に一体化）
+===================== */
+thead tr {
+    background: linear-gradient(135deg, #5ec8f8, #ffe066);
+    border-radius: 12px;
+}
+
+th {
+    background: #027efa;
+    padding: 16px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    height: 40px;
+    color: white;
+}
+
+/* 左右だけ丸める */
+th:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+th:last-child {
+    border-radius: 0 12px 12px 0;
+}
+/* 🔥行ホバー（tdに適用） */
+tr:hover th {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+/* =====================
+   セル
+===================== */
+td {
+    background: #ffffff;
+    padding: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 🔥中央揃え用 */
+.cell-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* =====================
+   ボタン共通
+===================== */
+td a,
+.listen-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    padding: 0 16px;
+
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* 読む */
+td a {
+    background: #ff4b4b;
+    color: white;
+}
+
+
+/* radiko */
+.listen-btn.radiko {
+    background: #3aa7ff;
+    color: white;
+}
+
+/* Spotify */
+.listen-btn.spotify {
+    background: #1db954;
+    color: white;
+}
+
+/* 🔥ボタンホバー（全共通） */
+td a:hover,
+.listen-btn:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+
+    color: #ffcc00; /* ←これ追加 */
+}
+
+/* =====================
+   行（カード風）
+===================== */
+tr {
+    transition: all 0.25s ease;
+}
+
+/* 🔥行ホバー（tdに適用） */
+tr:hover td {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+/* 角丸 */
+tr td:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+tr td:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* =====================
+   iframe
+===================== */
+td iframe {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =====================
+   レスポンシブ
+===================== */
+@media (max-width: 900px) {
+    table {
+        font-size: 12px;
+    }
+
+    td iframe {
+        max-width: 250px;
+        height: 150px;
+    }
+}

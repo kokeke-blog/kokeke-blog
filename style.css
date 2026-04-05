@@ -1,197 +1,259 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f5f7fa;
+    font-family: -apple-system, BlinkMacSystemFont;
+    background: linear-gradient(135deg, #eaf6ff, #fffbea);
     margin: 0;
-    padding: 0;
 }
 
-/* 全体の箱 */
 .container {
-    max-width: 800px;
+    max-width: 860px;
     margin: 40px auto;
     background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
-/* コンテナ */
-.container2 {
-    max-width: 1300px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
+/* 通常リンク（←これが「運営者はこちら」に適用される） */
+a {
+  color: #1a73e8;          /* ← Googleっぽいしっかり青 */
+  text-decoration: underline; /* ← 下線ON */
+  font-weight: 500;
 }
 
-/* タイトル */
-h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
-}
-
-h2 {
-    font-size: 20px;
-    margin-bottom: 0px;
-}
-
-h3{
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-h4{
-    font-size: 22px;
-    margin-bottom: 0px;
-}
-
-h5{
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-/* 日付 */
-.date {
-    color: gray;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-/* 本文 */
-p {
-    line-height: 1.8;
-    color: #333;
+/* ホバー時 */
+a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
 }
 
 /* 見出し */
 h2 {
-    margin-top: 30px;
-    border-left: 4px solid #4a90e2;
+    border-left: 6px solid #5ec8f8;
     padding-left: 10px;
+    margin-top: 35px;
 }
 
-/* リンク */
-a {
-    color: #4a90e2;
-    text-decoration: none;
+/* リスト */
+.info-list {
+    padding-left: 20px;
+    line-height: 1.9;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-/* テーブル */
-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px; /* ← 行をカード化 */
-    margin-top: 20px;
+/* カード */
+.info-card {
+    background: linear-gradient(135deg,#f0f9ff,#fff4c2);
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 10px;
+    transition: 0.25s;
 }
 
-/* ヘッダー */
-th {
-    background:#1db954;
-    color: white;
-    padding: 14px;
-    font-weight: 600;
-    border: none;
-    text-align: center;
-}
-
-/* 行をカード化 */
-td {
-    background: #ffffff;
-    padding: 16px;
-    border: none;
-    text-align: center;
-}
-
-/* 行全体をカード風に */
-tr {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.2s ease;
-}
-
-tr:hover {
+.info-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
+/* 横並び */
 .content {
   display: flex;
-  gap: 30px; /* ← ここを20→40くらいに */
-  align-items: flex-start;
+  gap: 40px;
+  align-items: center; /* ← 縦中央にする */
 }
 
-.content img {
-  width: 190px;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 0px; /* ← 追加 */
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 */
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.video-card {
-  background: #fafafa;
-  padding: 10px;
-  border-radius: 10px;
-  transition: 0.2s;
-}
-
-.video-card:hover {
-  transform: translateY(-5px);
-}
-
-.video-caption {
-  margin-top: 8px;
-  font-size: 13px;
-  color: #555;
-  text-align: center;
-}
-@media (max-width: 800px) {
-  .video-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* 画像 */
 .image-box {
+  background: #f8fdff;
+  padding: 8px;
+  border-radius: 18px;
+
+  margin-left: auto; /* ← 右に寄せる */
+  margin-right: auto;
   text-align: center;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
 .image-box img {
-  width: 190px;
-  border-radius: 10px;
+  width: 200px; /* ← 少し大きく */
+  border-radius: 14px;
 }
 
-.image-caption {
-  font-size: 13px;
-  color: #666;
-  margin-top: 8px;
+.image-box img:hover {
+    transform: scale(1.05) rotate(-1deg);
 }
-/*
-img {
-    max-width: 25%;
+
+/* プロフィール */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ← 重要 */
+    margin-top: 12px;
+    flex-wrap: wrap; /* ← はみ出し防止 */
+}
+
+/* 名前幅固定（ズレ防止） */
+.profile span {
+    min-width: 160px;
+}
+
+/* SNS */
+.sns-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sns-icons a {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* アイコンサイズ調整 */
+.sns-icons i {
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* ホバー */
+.sns-icons a:hover {
+    transform: translateY(-4px) scale(1.08);
+    background: linear-gradient(135deg, #5ec8f8, #ffe066);
+    color: #333;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* 小ボタン */
+.mini-btn {
+    background: #5ec8f8;
+    color: white;
+    padding: 4px 10px;
     border-radius: 10px;
-    margin-top: 20px;
+    font-size: 12px;
 }
-*/
+
+/* 動画 */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.video-card {
+    background: linear-gradient(145deg, #f0faff, #fffde7);
+    padding: 12px;
+    border-radius: 16px;
+    transition: 0.25s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.video-card:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.video-card:hover iframe {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.video-caption {
+  font-size: 14px;      /* ← 好きなサイズに変更OK */
+  text-align: center;   /* ← 中央揃え */
+  margin-top: 8px;      /* ← 動画との余白（おすすめ） */
+  line-height: 1.5;     /* ← 読みやすくなる */
+}
+
+/* 動画枠 */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* iframe */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* 記事一覧 */
+.list-card {
+    background: #f8fcff;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.list-item {
+    margin: 10px 0;
+}
+
+/* ボタン */
+.button-link {
+    background: #5ec8f8;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.button-link:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.button-link:active {
+    transform: scale(0.95);
+}
+
+.official-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px; /* ← SNSと高さ統一 */
+
+    /* 🔥ここ重要 */
+  width: auto;          /* ← 固定幅やめる */
+  min-width: 120px;     /* ← 最低幅だけ保証 */
+  max-width: 240px;     /* ← 広がりすぎ防止 */
+  padding: 0 8px;
+
+  border-radius: 8px !important; /* ← 強制上書き */
+
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #5ec8f8, #ffe066);
+  color: #007bff;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.official-btn:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}

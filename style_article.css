@@ -1,0 +1,89 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont;
+    background: linear-gradient(135deg, #eaf6ff, #fffbea);
+    margin: 0;
+}
+
+.container {
+    max-width: 860px;
+    margin: 40px auto;
+    background: white;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.summary-box {
+    background: #f8fcff;
+    border-left: 5px solid #5ec8f8;
+
+    max-width: 750px;   /* ← 好きな幅に調整 */
+    margin-left: 40px ;  /* ← 中央寄せ */
+    margin-bottom: 40px;
+    padding: 2px 2px;
+    
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.summary-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* 見出し */
+h2 {
+    border-left: 6px solid #5ec8f8;
+    padding-left: 10px;
+    margin-top: 35px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 6px;
+    margin-left: 40px;
+}
+
+h4 {
+    padding-left: 40px;
+    font-size: 20px;
+    margin-bottom: 4px; /* ←追加（余白を詰める） */
+}
+
+h5{
+    font-size: 16px;
+    padding-left: 40px;
+    margin-top: 0px; 
+    font-weight: normal;
+}
+/* リスト */
+.info-list {
+    padding-left: 60px;
+    line-height: 1.9;
+    margin-top: 0px; /* ←追加（余白を詰める） */
+}
+
+.red {
+    color: red;
+}
+
+/* 通常リンク（←これが「運営者はこちら」に適用される） */
+a {
+  color: #1a73e8;          /* ← Googleっぽいしっかり青 */
+  text-decoration: underline; /* ← 下線ON */
+  font-weight: 500;
+}
+
+/* ホバー時 */
+a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+p {
+  margin-left: 40px;
+}
