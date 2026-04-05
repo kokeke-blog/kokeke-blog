@@ -188,7 +188,7 @@
 
       </div>
 
-  <button class="slide-btn next" onclick="scrollSlide(1)">›</button>
+      <button class="slide-btn next" onclick="scrollSlide(1)">›</button>
 
     </div>
     <!-- ================= -->
@@ -234,15 +234,27 @@
 
   </div>
   <script>
-function scrollSlide(direction) {
-  const track = document.querySelector(".video-track");
-  const width = track.clientWidth;
-  track.scrollBy({
-    left: width * direction,
-    behavior: "smooth"
-  });
-}
-</script>
+    let currentIndex = 0;
+
+    function scrollSlide(direction) {
+      const items = document.querySelectorAll(".video-item");
+
+      // ① まず移動
+      currentIndex += direction;
+
+      // ② ここでループさせる 👇（ここがポイント）
+      if (currentIndex < 0) currentIndex = items.length - 1;
+      if (currentIndex >= items.length) currentIndex = 0;
+
+      // ③ スクロール
+      items[currentIndex].scrollIntoView({
+        behavior: "smooth",
+        inline: "center"
+      });
+    }
+  </script>
+
 
 </body>
+
 </html>
