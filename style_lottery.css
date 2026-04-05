@@ -116,20 +116,46 @@ body {
 }
 
 /* =========================
-   スマホ対応
+   スマホ対応（強化版）
 ========================= */
 @media (max-width: 600px) {
+
+  /* コンテナ */
   .container {
-    margin: 20px 10px;
-    padding: 20px;
+    margin: 12px;
+    padding: 16px;
   }
 
+  /* ボタン */
   .draw-btn {
     width: 100%;
     font-size: 16px;
+    padding: 14px;
   }
 
+  /* 結果 */
   .result-text {
-    font-size: 20px;
+    font-size: 22px;
   }
+
+  /* リンク */
+  .result-link {
+    font-size: 15px;
+  }
+
+  /* 戻る */
+  .back-link {
+    font-size: 14px;
+  }
+
+  /* ラジコ */
+  #radio-player iframe {
+    height: 260px; /* ← スマホは低めに */
+  }
+
+  /* 全体の読みやすさ */
+  body {
+    font-size: 17px;
+  }
+
 }

@@ -257,3 +257,67 @@ h2 {
     transform: translateY(-4px) scale(1.08);
     box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
+
+/* =========================
+   スマホ対応（超重要）
+========================= */
+@media (max-width: 600px) {
+
+  /* 全体フォント */
+  body {
+    font-size: 17px;
+  }
+
+  /* コンテナ余白 */
+  .container {
+    margin: 12px;
+    padding: 18px;
+  }
+
+  /* 見出し */
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* テキスト */
+  p {
+    line-height: 1.8;
+  }
+
+  /* 横並び → 縦並びにする */
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* 画像サイズ調整 */
+  .image-box img {
+    width: 160px;
+  }
+
+  /* プロフィール */
+  .profile span {
+    min-width: auto;
+  }
+
+  /* SNSボタン折り返し */
+  .sns-icons {
+    flex-wrap: wrap;
+  }
+
+  /* 動画タイトル */
+  .video-caption {
+    font-size: 15px;
+  }
+
+  /* ボタン */
+  .button-link {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+}
