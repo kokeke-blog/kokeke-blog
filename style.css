@@ -275,7 +275,7 @@ h2 {
 
 .video-track {
   display: flex;
-  overflow-x: auto;
+  overflow-x: auto;   /* ← ここを auto に戻す！！！ */
   scroll-snap-type: x mandatory;
   gap: 16px;
 
@@ -289,12 +289,14 @@ h2 {
   min-width: 100%;
   scroll-snap-align: center;
   text-align: center;
+  flex-shrink: 0; 
 }
 
 .video-item iframe {
   width: 100%;
   height: 200px;
   border-radius: 12px;
+  
 }
 
 /* ボタン */

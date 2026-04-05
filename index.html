@@ -56,7 +56,7 @@
               <a href="https://kbc.co.jp/r-radio/kokeke/" class="official-btn" target="_blank">
                 <i class="fas fa-link"></i> こけけ公式HP
               </a>
-              <a href="  https://radiko.jp/podcast/channels/1fb551c2-b120-42e4-8062-e9ba076efb0d?share=1
+              <a href="https://radiko.jp/podcast/channels/1fb551c2-b120-42e4-8062-e9ba076efb0d?share=1
             " class="official-btn" target="_blank">
                 ▶ radikoで聴く
               </a>
@@ -151,7 +151,8 @@
     <!-- ▼ スマホ用スライダー -->
     <div class="video-slider">
 
-      <button class="slide-btn prev">‹</button>
+      <button class="slide-btn prev" onclick="scrollSlide(-1)">‹</button>
+
 
       <div class="video-track">
 
@@ -187,7 +188,7 @@
 
       </div>
 
-      <button class="slide-btn next">›</button>
+  <button class="slide-btn next" onclick="scrollSlide(1)">›</button>
 
     </div>
     <!-- ================= -->
@@ -232,9 +233,16 @@
     <p>準備中...</p>
 
   </div>
-
-  </div>
+  <script>
+function scrollSlide(direction) {
+  const track = document.querySelector(".video-track");
+  const width = track.clientWidth;
+  track.scrollBy({
+    left: width * direction,
+    behavior: "smooth"
+  });
+}
+</script>
 
 </body>
-
 </html>
