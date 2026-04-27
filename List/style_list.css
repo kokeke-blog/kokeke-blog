@@ -1,0 +1,190 @@
+/* =========================
+   ベース
+========================= */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #eaf6ff, #fffbea);
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================
+   コンテナ
+========================= */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   🔥 テーブルラッパー（最重要）
+========================= */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* =========================
+   テーブル
+========================= */
+table {
+    width: 100%;
+    min-width: 720px; /* ←これが崩れ防止の核 */
+    border-collapse: separate;
+    border-spacing: 0 14px;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+thead tr {
+    background: linear-gradient(135deg, #5ec8f8, #ffe066);
+}
+
+th {
+    background: #027efa;
+    padding: 14px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: white;
+    white-space: nowrap; /* ←折り返し防止 */
+}
+
+/* 角丸 */
+th:first-child {
+    border-radius: 12px 0 0 12px;
+}
+th:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* =========================
+   セル
+========================= */
+td {
+    background: #ffffff;
+    padding: 14px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+/* 長文タイトル対策 */
+td:nth-child(4) {
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* =========================
+   ボタン
+========================= */
+td a,
+.listen-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 38px;
+    padding: 0 14px;
+
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    white-space: nowrap;
+}
+
+/* 読む */
+td a {
+    background: #ff4b4b;
+    color: white;
+}
+
+/* radiko */
+.listen-btn.radiko {
+    background: #3aa7ff;
+    color: white;
+}
+
+/* Spotify */
+.listen-btn.spotify {
+    background: #1db954;
+    color: white;
+}
+
+/* ホバー */
+td a:hover,
+.listen-btn:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    color: #ffcc00;
+}
+
+/* =========================
+   行（カード風）
+========================= */
+tr {
+    transition: all 0.25s ease;
+}
+
+tr:hover td {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* 角丸 */
+tr td:first-child {
+    border-radius: 12px 0 0 12px;
+}
+tr td:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* =========================
+   スマホ対応
+========================= */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 16px 8px;
+        padding: 16px;
+    }
+
+    /* 🔥スクロールしやすくする */
+    .table-wrapper {
+        padding-bottom: 10px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    /* タイトル少し詰める */
+    td:nth-child(4) {
+        font-size: 13px;
+    }
+
+    td a,
+    .listen-btn {
+        font-size: 11px;
+        height: 34px;
+        padding: 0 10px;
+    }
+}

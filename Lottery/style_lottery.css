@@ -1,0 +1,161 @@
+/* =========================
+   ベース
+========================= */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #eaf6ff, #fffbea);
+  margin: 0;
+}
+
+/* =========================
+   コンテナ
+========================= */
+.container {
+  max-width: 860px;
+  margin: 40px auto;
+  background: white;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   ガチャUI
+========================= */
+.lottery {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* ボタン */
+.draw-btn {
+  background: linear-gradient(135deg, #ff7a00, #ff3c00);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.draw-btn:hover {
+  opacity: 0.9;
+}
+
+.draw-btn:active {
+  transform: scale(0.95);
+}
+
+/* =========================
+   結果表示
+========================= */
+.result-text {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #ff6600;
+}
+
+/* 抽選中アニメーション */
+.spin {
+  animation: spinAnime 0.6s linear infinite;
+}
+
+@keyframes spinAnime {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* =========================
+   記事リンク
+========================= */
+.result-link {
+  display: block;
+  margin-top: 12px;
+  font-size: 16px;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.result-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   radikoプレイヤー
+========================= */
+#radio-player {
+  margin-top: 20px;
+}
+
+#radio-player iframe {
+  width: 100%;
+  height: 348px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* =========================
+   戻るリンク
+========================= */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   スマホ対応（強化版）
+========================= */
+@media (max-width: 600px) {
+
+  /* コンテナ */
+  .container {
+    margin: 12px;
+    padding: 16px;
+  }
+
+  /* ボタン */
+  .draw-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  /* 結果 */
+  .result-text {
+    font-size: 22px;
+  }
+
+  /* リンク */
+  .result-link {
+    font-size: 15px;
+  }
+
+  /* 戻る */
+  .back-link {
+    font-size: 14px;
+  }
+
+  /* ラジコ */
+  #radio-player iframe {
+    height: 260px; /* ← スマホは低めに */
+  }
+
+  /* 全体の読みやすさ */
+  body {
+    font-size: 17px;
+  }
+
+}
