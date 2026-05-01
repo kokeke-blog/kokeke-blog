@@ -94,7 +94,7 @@ h2 {
 /* 画像 */
 .image-box {
   background: #f8fdff;
-  padding: 8px;
+  padding: 2px;
   border-radius: 18px;
 
   margin-left: auto; /* ← 右に寄せる */
@@ -106,7 +106,7 @@ h2 {
 }
 
 .image-box img {
-  width: 250px; /* ← 少し大きく */
+  width: 260px; /* ← 少し大きく */
   border-radius: 14px;
 }
 
@@ -369,7 +369,7 @@ h2 {
   }
 
   .container_title img {
-    width: 50px;               /* ←小さくする */
+    width: 60px;               /* ←小さくする */
   }
 
   h1 {
@@ -399,7 +399,7 @@ h2 {
 
   /* 画像 */
   .image-box img {
-    width: 160px;
+    width: 400px;
     margin-top: 10px;
   }
 
