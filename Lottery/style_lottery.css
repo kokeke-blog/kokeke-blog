@@ -41,6 +41,7 @@ body {
 }
 
 .draw-btn:hover {
+  transform: scale(0.95);
   opacity: 0.9;
 }
 

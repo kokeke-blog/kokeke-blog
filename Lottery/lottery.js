@@ -6,7 +6,7 @@ function draw() {
     result.classList.add("spin");
 
     setTimeout(() => {
-        const num = Math.floor(Math.random() * 64) + 1;
+        const num = Math.floor(Math.random() * 64) + 1; // ここを変える
 
         result.classList.remove("spin");
         result.textContent = "第" + num + "回！";
