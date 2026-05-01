@@ -88,7 +88,7 @@ h2 {
 
 .content .text {
   flex: 1;
-  min-width: 250px; /* ←これで崩れ防止 */
+  min-width: 300px; /* ←これで崩れ防止 */
 }
 
 /* 画像 */
@@ -106,7 +106,7 @@ h2 {
 }
 
 .image-box img {
-  width: 200px; /* ← 少し大きく */
+  width: 250px; /* ← 少し大きく */
   border-radius: 14px;
 }
 
@@ -369,7 +369,7 @@ h2 {
   }
 
   .container_title img {
-    width: 42px;               /* ←小さくする */
+    width: 50px;               /* ←小さくする */
   }
 
   h1 {
