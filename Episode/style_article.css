@@ -29,8 +29,8 @@ body {
     border-left: 5px solid #5ec8f8;
 
     max-width: 750px;
-    margin: 20px auto; /* ←中央寄せに変更 */
-    padding: 12px 16px;
+    margin: 5px auto; /* ←中央寄せに変更 */
+    padding: 2px 16px;
 
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
