@@ -1,12 +1,16 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont;
-    background: #e5f4fc;
-    
+    font-family: "Zen Maru Gothic", sans-serif;
+    background: #daf6f1;
+
+    background-image: radial-gradient(
+        #ffffff 2px,
+        transparent 2px
+    );
+    background-size: 30px 30px;
     /*background: linear-gradient(135deg, #eaf6ff, #fffbea);*/
     margin: 0;
     padding: 0;
 
-    
 }
 
 .site-header {
@@ -15,21 +19,24 @@ body {
   top: 0;
   z-index: 3000;
 
-  background: white;
+  background: #79ccbd;
 }
 
 .container_title {
 
   max-width: 860px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px;
 
   display: grid;
   grid-template-columns: 120px 1fr 120px;
   align-items: center;
 
-  color: #2ca9e1;
-  background: white;
+  color: white;
+  background: #79ccbd;
+
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-style: normal;
 }
 .title-left {
   display: flex;
@@ -45,7 +52,7 @@ body {
 }
 
 .title-left img {
-  width: 120px;   /* 好きなサイズに調整OK */
+  width: 90px;   /* 好きなサイズに調整OK */
   height: auto;
   border-radius: 12px;
 }
@@ -53,20 +60,37 @@ body {
 .title-center h1 {
   font-size: 36px;
   text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  
 }
+
 /* サブタイトル */
+.title-center h1 span {
+  margin-top: -8px;
+  font-size: 18px;
+  color: rgb(31, 31, 31);
+  text-align: right;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-style: normal;
+
+}
+
 .title-center p {
   margin-top: -8px;
   font-size: 18px;
   color: rgb(31, 31, 31);
   text-align: right;
+
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-style: normal;
 }
 
 /* 横線 */
 .header-line {
   width:100%;
   height: 4px;
-  background: #2ca9e1;
+  background: #4ecdb6;
 }
 
 .container {
@@ -93,23 +117,23 @@ a:hover {
 
 .line {
   width:100%;
-  height: 2px;
-  background: #d8d7d7;
+  height: 3px;
+  background:#79ccbd;
   margin-top: 32px;
 }
 
 /* 見出し */
 h2 {
-  border-left: 6px solid #2ca9e1;
+  border-left: 6px solid #79ccbd;
   padding-left: 10px;
   margin-top: 0px;
-
+  color: black;
   font-size: 24px;  
   
 }
 
 h3 {
-    border-left: 6px solid #2ca9e1;
+    border-left: 6px solid #79ccbd;
     padding-left: 10px;
     margin-top: 35px;
 
@@ -128,7 +152,7 @@ h3 {
 .info-card {
     background: #fffeee;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 16px;
     margin-top: 10px;
     transition: 0.25s;
 }
@@ -166,9 +190,9 @@ h3 {
 }
 
 .image-box img {
-  width: 260px; /* ← 少し大きく */
+  width: 300px; /* ← 少し大きく */
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  /*box-shadow: 0 2px 6px rgba(0,0,0,0.08);*/
 }
 
 .image-box img:hover {
@@ -186,7 +210,9 @@ h3 {
 
 /* 名前幅固定（ズレ防止） */
 .profile span {
-    min-width: 160px;
+    display: block;
+    width: 210px; 
+    flex-shrink: 0;
 }
 
 /* SNS */
@@ -199,11 +225,13 @@ h3 {
 .sns-icons a {
     width: 40px;
     height: 40px;
-    background: white;
+    background: #79ccbd;
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
     text-decoration: none;
 
@@ -215,12 +243,13 @@ h3 {
 .sns-icons i {
     font-size: 16px;
     line-height: 1;
+   
 }
 
 /* ホバー */
 .sns-icons a:hover {
     transform: translateY(-4px) scale(1.08);
-    background: #2ca9e1;/*linear-gradient(135deg, #5ec8f8, #ffe066);*/
+    /*background: #2ca9e1;/*linear-gradient(135deg, #5ec8f8, #ffe066);*/
     color: #ffcc00;
     box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
@@ -290,7 +319,7 @@ h3 {
 .list-card {
     background: #fffeee;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 16px;
 }
 
 .list-card:hover {
@@ -304,7 +333,20 @@ h3 {
 
 /* ボタン */
 .button-link {
-    background: #5ec8f8;
+    background: #79ccbd;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.button-link-read {
+    background: #ff4b4b;
     color: white;
     padding: 6px 14px;
     border-radius: 20px;
@@ -322,6 +364,15 @@ h3 {
 }
 
 .button-link:active {
+    transform: scale(0.95);
+}
+
+.button-link-read:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.button-link-read:active {
     transform: scale(0.95);
 }
 
@@ -408,7 +459,63 @@ h3 {
 .next { right: 10px; }
 
 .blue {
-    color: #2ca9e1;
+    color: #007bff;
+}
+
+#topBtn {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #79ccbd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+    cursor: pointer;
+    
+    /* 追加：最初は非表示 */
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.3s, transform 0.3s;
+}
+/* JavaScriptでこのclassが付いたら表示 */
+#topBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+#topBtn span {
+    width: 20px;
+    height: 20px;
+
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+
+    transform: rotate(45deg);
+
+    margin-top: 15px;
+}
+
+.new {
+    color: #ff4d4d;
+    font-weight: bold;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 /* =========================
