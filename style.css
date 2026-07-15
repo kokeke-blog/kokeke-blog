@@ -22,6 +22,11 @@ body {
   background: #79ccbd;
 }
 
+/* PCでは横並び */
+.sp-br{
+    display:inline;
+}
+
 .container_title {
 
   max-width: 860px;
@@ -529,6 +534,10 @@ h3 {
 
   body {
     font-size: 15px;
+  }
+
+  .sp-br{
+        display:block;
   }
 
   /* =========================
