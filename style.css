@@ -13,6 +13,10 @@ body {
 
 }
 
+p{
+  margin-top: 0px;
+}
+
 .site-header {
   position: sticky;
   
@@ -25,6 +29,10 @@ body {
 /* PCでは横並び */
 .sp-br{
     display:inline;
+}
+
+.sp-br2{
+    display:none;
 }
 
 .container_title {
@@ -547,6 +555,7 @@ h3 {
 
   .site-header {
     width: 100%;
+    margin-bottom: 0;
   }
 
   .container_title {
@@ -559,6 +568,7 @@ h3 {
     gap: 12px;
 
     align-items: center;
+    
   }
 
   .title-left {
@@ -573,6 +583,7 @@ h3 {
   .title-center {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
 
   .title-center h1 {
@@ -581,7 +592,8 @@ h3 {
 
     font-size: 26px;
     line-height: 1.4;
-
+    text-align: center;
+    justify-content: center;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
   }
 
@@ -592,7 +604,7 @@ h3 {
     font-size: 11px;
     line-height: 1.4;
 
-    text-align: right;
+    text-align: center;
 
     color: #444;
   }
@@ -662,6 +674,11 @@ h3 {
     min-width: auto;
   }
 
+  .sp-br2 {
+    display: block;
+    height: 0;
+  }
+
   /* =========================
      画像
   ========================= */
@@ -719,6 +736,12 @@ h3 {
     font-size: 13px;
 
     padding: 8px 14px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  
   }
 
   .official-btn {
@@ -774,5 +797,49 @@ h3 {
 
     font-size: 16px;
   }
+
+  #topBtn {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #79ccbd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+    cursor: pointer;
+    
+    /* 追加：最初は非表示 */
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.3s, transform 0.3s;
+}
+/* JavaScriptでこのclassが付いたら表示 */
+#topBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+#topBtn span {
+    width: 10px;
+    height: 10px;
+
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+
+    transform: rotate(45deg);
+
+    margin-top: 8px;
+}
 
 }
