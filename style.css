@@ -1,5 +1,5 @@
 body {
-    font-family: "Zen Maru Gothic", sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
     background: #daf6f1;
 
     background-image: radial-gradient(
@@ -31,10 +31,11 @@ p{
     display:inline;
 }
 
+/*
 .sp-br2{
     display:none;
 }
-
+*/
 .container_title {
 
   max-width: 860px;
@@ -44,7 +45,6 @@ p{
   display: grid;
   grid-template-columns: 120px 1fr 120px;
   align-items: center;
-
   color: white;
   background: #79ccbd;
 
@@ -60,7 +60,7 @@ p{
 .title-center {
   width: 100%;
   text-align: center;
-  /*padding-left: 50px;  /* ←ロゴぶん避ける */
+  padding-left: 50px;  /* ←ロゴぶん避ける */
   /*padding-right: 40px;  /* ←左右バランス */
 }
 
@@ -68,12 +68,13 @@ p{
   width: 90px;   /* 好きなサイズに調整OK */
   height: auto;
   border-radius: 12px;
+  margin-left: 55px;
 }
 
 .title-center h1 {
   font-size: 36px;
   text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
   
 }
 
@@ -84,7 +85,7 @@ p{
   color: rgb(31, 31, 31);
   text-align: right;
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-style: normal;
 
 }
@@ -186,6 +187,7 @@ h3 {
 .content .text {
   flex: 1;
   min-width: 300px; /* ←これで崩れ防止 */
+  margin-bottom: 12px;
 }
 
 /* 画像 */
@@ -194,8 +196,7 @@ h3 {
   padding: 0px;
   border-radius: 0px;
 
-  margin-left: auto; /* ← 右に寄せる */
-  margin-right: auto;
+  margin: auto; /* ← 右に寄せる */
   text-align: center;
 
   /*box-shadow: 0 6px 16px rgba(0,0,0,0.08);*/
@@ -203,7 +204,8 @@ h3 {
 }
 
 .image-box img {
-  width: 300px; /* ← 少し大きく */
+  padding-right: 50px;
+  width: 350px; /* ← 少し大きく */
   border-radius: 12px;
   /*box-shadow: 0 2px 6px rgba(0,0,0,0.08);*/
 }
@@ -219,13 +221,14 @@ h3 {
     gap: 10px; /* ← 重要 */
     margin-top: 12px;
     flex-wrap: wrap; /* ← はみ出し防止 */
+    padding-left: 20px;
 }
 
 /* 名前幅固定（ズレ防止） */
 .profile span {
     display: block;
-    width: 210px; 
-    flex-shrink: 0;
+    width: 230px; 
+    /*flex-shrink: 0;*/
 }
 
 /* SNS */
@@ -555,17 +558,16 @@ h3 {
 
   .site-header {
     width: 100%;
-    margin-bottom: 0;
+    margin:0;
   }
 
   .container_title {
 
     max-width: 100%;
-    padding: 10px 14px;
-
+    padding: 10px 25px;
     display: grid;
     grid-template-columns: 70px 1fr;
-    gap: 12px;
+    gap: 0px;
 
     align-items: center;
     
@@ -573,17 +575,21 @@ h3 {
 
   .title-left {
     justify-content: flex-start;
+    margin:0;
   }
 
   .title-left img {
     width: 64px;
     border-radius: 10px;
+    margin-left:0px;
   }
 
   .title-center {
     width: 100%;
     text-align: center;
     justify-content: center;
+    margin-right: 40px;
+    padding-left: 0px;
   }
 
   .title-center h1 {
@@ -611,6 +617,7 @@ h3 {
 
   .header-line {
     height: 3px;
+    margin-bottom: -25px;
   }
 
   /* =========================
@@ -690,7 +697,7 @@ h3 {
   }
 
   .image-box img {
-
+    padding: 0px;
     width: 100%;
     max-width: 240px;
 
@@ -705,6 +712,7 @@ h3 {
 
     align-items: flex-start;
     gap: 8px;
+    padding-left: 5px;
   }
 
   .profile span {
@@ -722,7 +730,6 @@ h3 {
   }
 
   .sns-icons a {
-
     width: 38px;
     height: 38px;
   }

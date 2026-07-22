@@ -75,6 +75,24 @@ const episodes = {
 
 let isDrawing = false;
 
+    const frames = [
+        "Anime/A1.png",
+        "Anime/A2.png",
+        "Anime/A3.png",
+        "Anime/A4.png",
+        "Anime/A5.png",
+        "Anime/A6.png",
+        "Anime/A7.png",
+        "Anime/A8.png",
+        "Anime/A9.png"
+    ];
+
+    // 先読み
+    frames.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+
 function draw() {
 
     // 抽選中なら何もしない
@@ -94,18 +112,6 @@ function draw() {
     animation.style.display = "block";
     animation.src = "Anime/A1.png";
 
-    const frames = [
-        "Anime/A1.png",
-        "Anime/A2.png",
-        "Anime/A3.png",
-        "Anime/A4.png",
-        "Anime/A5.png",
-        "Anime/A6.png",
-        "Anime/A7.png",
-        "Anime/A8.png",
-        "Anime/A9.png"
-    ];
-
     let frame = 0;
 
     const anim = setInterval(() => {
@@ -117,16 +123,16 @@ function draw() {
 
             clearInterval(anim);
 
-             // 最後の画像を0.5秒表示
-    setTimeout(() => {
-            animation.style.display = "none";
-            const num = Math.floor(Math.random() * 64) + 1;
+            // 最後の画像を0.5秒表示
+            setTimeout(() => {
+                animation.style.display = "none";
+                const num = Math.floor(Math.random() * 64) + 1;
 
-            result.textContent = `第${num}回！`;
+                result.textContent = `第${num}回！`;
 
-            if (episodes[num]) {
+                if (episodes[num]) {
 
-                player.innerHTML = `
+                    player.innerHTML = `
             <iframe
                 title="radio-player"
                 src="${episodes[num]}"
@@ -136,22 +142,22 @@ function draw() {
             </iframe>
             `;
 
-            } else {
+                } else {
 
-                player.innerHTML =
-                    "<p>この回は再生プレイヤー未対応です</p>";
-            }
+                    player.innerHTML =
+                        "<p>この回は再生プレイヤー未対応です</p>";
+                }
 
-                        // 抽選終了
+                // 抽選終了
                 isDrawing = false;
-                
+
             }, 400); // ← 500ms = 0.5秒
         }
 
 
-    }, 200);
+    }, 300);
 
-        
+
 }
 
 

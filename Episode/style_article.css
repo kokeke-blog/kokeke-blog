@@ -31,20 +31,167 @@ body {
    サマリー
 ========================= */
 .summary-box {
-    background: #fffeee;
-    border-left: 5px solid #79ccbd;
+
+    position: relative;
 
     max-width: 750px;
-    margin: 5px auto; /* ←中央寄せに変更 */
-    padding: 2px 16px;
+    margin: 20px auto 10px auto;
+    padding: 18px 20px 6px 20px;
 
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background: #fffef7;
+
+    border-radius: 30px;
+
+    border-top: 3px solid #8fd8cc;
+    border-right: 3px solid #8fd8cc;
+    border-bottom: 3px solid #8fd8cc;
+
+    /*
+    box-shadow:
+        0 15px 40px rgba(143,216,204,0.18);
+    */    
+    font-family: 'Zen Maru Gothic', sans-serif;
+
 }
 
-.summary-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+/* 左の太いバー */
+.summary-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 28px;
+
+    background: #79ccbd;
+
+    border-radius: 30px 0 0 30px;
+}
+
+/* キラキラ */
+/*
+.summary-box::after {
+
+    content: "✧  ✦  ✧";
+
+    position: absolute;
+
+    top: 70px;
+    right: 70px;
+
+    color: #9fe0d5;
+
+    font-size: 40px;
+    letter-spacing: 15px;
+}
+*/
+/* ヘッダー */
+.summary-header {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    margin-left: 20px;
+}
+
+/* ラジオ */
+.radio-icon {
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #a9e7dc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 26px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+
+/* タイトルラベル */
+.summary-label {
+
+    background: linear-gradient(
+        180deg,
+        #b8efe6,
+        #9fdfd4
+    );
+
+    color: #222;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 8px 45px;
+
+    clip-path: polygon(
+        12% 0,
+        100% 0,
+        100% 100%,
+        12% 100%,
+        0 50%
+    );
+
+    border: 3px solid #8fd8cc;
+}
+
+/* 点線 */
+.summary-line {
+
+    margin: 12px 0 15px 80px;
+
+    border-top: 5px dotted #9adfd3;
+
+    width: 55%;
+}
+
+/* リスト */
+.summary-list {
+
+    list-style: none;
+
+    padding: 0;
+    margin-left: 40px;
+}
+
+.summary-list li {
+
+    position: relative;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+
+    padding-left: 32px;
+}
+
+/* 丸 */
+.summary-list li::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0.55em;
+
+    width: 14px;
+    height: 14px;
+
+    background: #79ccbd;
+
+    border-radius: 50%;
 }
 
 /* =========================
@@ -53,12 +200,15 @@ body {
 h1 {
     padding-left: 10px;
     margin-top: 0px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+
 }
 
 h2 {
     border-left: 6px solid #79ccbd;
     padding-left: 10px;
     margin-top: 35px;
+    font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 h3 {
@@ -66,6 +216,7 @@ h3 {
     margin-top: 40px;
     margin-bottom: 10px;
     padding-left: 20px; /* ←marginじゃなくpaddingに変更 */
+    font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 h4 {
@@ -100,8 +251,11 @@ p {
 }
 
 /* 強調 */
-.red {
+red {
     color: red;
+}
+blue {
+    color: rgb(0, 81, 255);
 }
 
 /* =========================
@@ -122,6 +276,11 @@ a:hover {
     color: inherit;
 }
 
+.tweet-wrap{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
 /* =========================
    スマホ対応
 ========================= */
@@ -137,8 +296,15 @@ a:hover {
     }
 
     .summary-box {
-        margin: 16px 0;
+        margin: 12px 0;
         padding: 12px;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+    h2{
+        font-size: 22px;
     }
 
     h3 {
