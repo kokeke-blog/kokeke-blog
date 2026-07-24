@@ -1,5 +1,5 @@
 body {
-    font-family: 'Zen Maru Gothic', sans-serif;
+    font-family: 'Zen Maru Gothic','Poppins', sans-serif;
     background: #daf6f1;
 
     background-image: radial-gradient(
@@ -48,7 +48,7 @@ p{
   color: white;
   background: #79ccbd;
 
-  font-family: "Zen Maru Gothic", sans-serif;
+  font-family: "Zen Maru Gothic", 'Poppins',sans-serif;
   font-style: normal;
 }
 .title-left {
@@ -193,7 +193,7 @@ h3 {
 /* 画像 */
 .image-box {
   background:none;
-  padding: 0px;
+  padding-top: 80px;
   border-radius: 0px;
 
   margin: auto; /* ← 右に寄せる */
@@ -401,8 +401,8 @@ h3 {
 
     /* 🔥ここ重要 */
   width: auto;          /* ← 固定幅やめる */
-  min-width: 120px;     /* ← 最低幅だけ保証 */
-  max-width: 240px;     /* ← 広がりすぎ防止 */
+  min-width: 100px;     /* ← 最低幅だけ保証 */
+  max-width: 200px;     /* ← 広がりすぎ防止 */
   padding: 0 8px;
 
   border-radius: 8px !important; /* ← 強制上書き */
@@ -658,7 +658,6 @@ h3 {
   }
 
   .info-list {
-
     padding-left: 18px;
     line-height: 1.9;
   }
@@ -694,6 +693,8 @@ h3 {
 
     width: 100%;
     text-align: center;
+    padding-top:0px;
+    margin-top:-20px;
   }
 
   .image-box img {
